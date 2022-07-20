@@ -21,7 +21,7 @@
             <el-menu-item index="/page/productCentor" @click="changeActiveIndex">产品中心</el-menu-item>
 
             <el-menu-item index="/page/personalCentor" @click="changeActiveIndex">个人中心</el-menu-item>
-            <el-menu-item index="/page/help" @click="changeActiveIndex">帮助</el-menu-item>
+            <el-menu-item index="/page/help/details" @click="changeActiveIndex">帮助</el-menu-item>
             </el-menu>
         </el-header>
       

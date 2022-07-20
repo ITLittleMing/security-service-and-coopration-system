@@ -8,7 +8,7 @@
             router="true"
         >
             <el-menu-item index="/page/personalCentor/myPost" @click="changeActiveIndex">我的发布</el-menu-item>
-            <el-menu-item index="/page/personalCentor/myTask" @click="changeActiveIndex">我的任务</el-menu-item>
+            <el-menu-item index="/page/personalCentor/myTask/unsolved" @click="changeActiveIndex">我的任务</el-menu-item>
             <el-menu-item index="/page/personalCentor/personalData/serviceData" @click="changeActiveIndex">个人数据</el-menu-item>
         </el-menu>
         <router-view></router-view>

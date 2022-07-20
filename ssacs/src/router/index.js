@@ -10,7 +10,10 @@ import ServiceData from '../views/PersonalChildren/PersonalDataChildren/ServiceD
 import MyPost from '../views/PersonalChildren/MyPost';
 import Unsolved from '../views/PersonalChildren/MyPostChildren/Unsolved';
 import Solved from '../views/PersonalChildren/MyPostChildren/Solved';
-
+import MyTask from '../views/PersonalChildren/MyTask'
+import MyTaskSolved from '../views/PersonalChildren/MyTaskChildren/Solved'
+import MyTaskUnsolved from '../views/PersonalChildren/MyTaskChildren/Unsolved'
+import BlockchianDetails from '../views/HelpChiledren/BlockchianDetails'
 
 const routes = [
   {
@@ -52,7 +55,19 @@ const routes = [
           {
             path: 'myTask',
             name: 'myTask',
-            component: ''
+            component: MyTask,
+			children:[
+				{
+				  path: 'unsolved',
+				  name: 'unsolved',
+				  component: MyTaskUnsolved
+				},
+				{
+					path:'solved',
+					name:'solved',
+					component:MyTaskSolved
+				}
+			]
           },
           {
             path: 'personalData',
@@ -93,7 +108,14 @@ const routes = [
       {
         path: 'help',
         name: 'help',
-        component: Help
+        component: Help,
+		children:[
+			{
+				path:'details',
+				name:'details',
+				component:BlockchianDetails
+			},
+		]
       }
     ]
   }
