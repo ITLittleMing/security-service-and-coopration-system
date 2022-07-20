@@ -14,12 +14,21 @@ import MyTask from '../views/PersonalChildren/MyTask'
 import MyTaskSolved from '../views/PersonalChildren/MyTaskChildren/Solved'
 import MyTaskUnsolved from '../views/PersonalChildren/MyTaskChildren/Unsolved'
 import BlockchianDetails from '../views/HelpChiledren/BlockchianDetails'
+import PostTask from '../views/ProductChildren/PostTask'
+import Plan from '../views/Plan'
 
 const routes = [
   {
     path: '/',
     redirect: '/page/home'  
   },
+
+  {
+    path:'/plan',
+    name:'plan',
+    component:Plan
+  },
+
   {
     path: '/page',
     name: 'page',
@@ -96,7 +105,7 @@ const routes = [
           {
             path: 'postTask',
             name: 'postTask',
-            component: ''
+            component: PostTask/////////////////////////////////////////////////////////////////
           },
           {
             path: 'getTask',

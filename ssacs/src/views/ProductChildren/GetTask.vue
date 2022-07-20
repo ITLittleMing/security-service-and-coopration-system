@@ -13,7 +13,7 @@
                 <el-descriptions-item label="详细描述与安全策略" :span="2" width="300px">Suzhou</el-descriptions-item>
             </el-descriptions>
             <div class="action">
-                <el-button type="primary" style="width: 600px;" plain>接收悬赏</el-button>
+                <el-button type="primary" style="width: 600px;" plain @click="ToPlan">接收悬赏</el-button>
             </div>
         </div>
 
@@ -45,4 +45,11 @@
 </style>
 
 <script>
+    export default {
+        methods:{
+            ToPlan(){
+                this.$router.push("/Plan");
+            }
+        }
+    }
 </script>
