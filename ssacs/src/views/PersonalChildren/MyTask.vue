@@ -7,8 +7,8 @@
             @select="handleSelect"
             router="true"
         >
-            <el-menu-item index="/page/personalCentor/myTask/unsolved">未解决</el-menu-item>
-            <el-menu-item index="/page/personalCentor/myTask/solved">已解决</el-menu-item>
+            <el-menu-item index="/page/personalCentor/myTask/myTaskUnsolved">未解决</el-menu-item>
+            <el-menu-item index="/page/personalCentor/myTask/myTaskSolved">已解决</el-menu-item>
         </el-menu>
         <router-view></router-view>
     </div>
@@ -24,7 +24,7 @@
     export default{
         data() {
             return {
-                activeIndex: "/page/personalCentor/myTask/unsolved"
+                activeIndex: "/page/personalCentor/myTask/myTaskUnsolved"
             }
         },
         methods: {

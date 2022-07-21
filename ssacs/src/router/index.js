@@ -8,8 +8,8 @@ import GetTask from '../views/ProductChildren/GetTask';
 import PersonalData from '../views/PersonalChildren/PersonalData';
 import ServiceData from '../views/PersonalChildren/PersonalDataChildren/ServiceData';
 import MyPost from '../views/PersonalChildren/MyPost';
-import Unsolved from '../views/PersonalChildren/MyPostChildren/Unsolved';
-import Solved from '../views/PersonalChildren/MyPostChildren/Solved';
+import MyPostUnsolved from '../views/PersonalChildren/MyPostChildren/Unsolved';
+import MyPostSolved from '../views/PersonalChildren/MyPostChildren/Solved';
 import MyTask from '../views/PersonalChildren/MyTask'
 import MyTaskSolved from '../views/PersonalChildren/MyTaskChildren/Solved'
 import MyTaskUnsolved from '../views/PersonalChildren/MyTaskChildren/Unsolved'
@@ -22,7 +22,6 @@ const routes = [
     path: '/',
     redirect: '/page/home'  
   },
-
   {
     path:'/plan',
     name:'plan',
@@ -50,14 +49,14 @@ const routes = [
             component: MyPost,
             children:[
               {
-                path: 'unsolved',
-                name: 'unsolved',
-                component: Unsolved
+                path: 'myPostUnsolved',
+                name: 'myPostUnsolved',
+                component: MyPostUnsolved
               },
               {
-                path: 'solved',
-                name: 'solved',
-                component: Solved
+                path: 'myPostSolved',
+                name: 'myPostSolved',
+                component: MyPostSolved
               }
             ]
           },
@@ -67,13 +66,13 @@ const routes = [
             component: MyTask,
 			children:[
 				{
-				  path: 'unsolved',
-				  name: 'unsolved',
+				  path: 'myTaskUnsolved',
+				  name: 'myTaskUnsolved',
 				  component: MyTaskUnsolved
 				},
 				{
-					path:'solved',
-					name:'solved',
+					path:'myTaskSolved',
+					name:'myTaskSolved',
 					component:MyTaskSolved
 				}
 			]
@@ -105,7 +104,7 @@ const routes = [
           {
             path: 'postTask',
             name: 'postTask',
-            component: PostTask/////////////////////////////////////////////////////////////////
+            component: PostTask
           },
           {
             path: 'getTask',
